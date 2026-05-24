@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Poppins', system-ui, sans-serif;
+  --font-heading: 'Montserrat', system-ui, sans-serif;
+  --font-alt: 'Poppins', system-ui, sans-serif;
+  
+  --color-brand-green: #88B04B;
+  --color-brand-fresh: #A9DFBF;
+  --color-brand-cream: #FDFBF7;
+  --color-brand-cream-dark: #F5EBE0;
+  --color-brand-brown: #A67C52;
+  --color-brand-brown-dark: #2D452E;
+  --color-brand-orange: #FF8C42;
+  --color-brand-accent: #FFB74D;
+}
+
+/* Custom styles for animations and smooth behaviors */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Glassmorphism utility classes */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-effect-dark {
+  background: rgba(45, 41, 38, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hide scrollbar but keep functional */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Pulse Glow animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(74, 228, 135, 0.4), 0 0 10px rgba(74, 228, 135, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(74, 228, 135, 0.8), 0 0 25px rgba(74, 228, 135, 0.4);
+  }
+}
+
+.pulse-glow-green {
+  animation: pulse-glow 2s infinite;
+}
+

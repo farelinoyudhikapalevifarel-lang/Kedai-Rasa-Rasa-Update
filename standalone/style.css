@@ -1,0 +1,90 @@
+/* 
+  Kedai Rasa Rasa - Standalone Stylesheet
+  Premium responsive design rules for offline UMKM website
+*/
+
+/* Scroll Smoothness */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Glassmorphism Styles */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Loading effect transition */
+#loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Floating animation keyframes */
+@keyframes hoverFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: hoverFloat 4s ease-in-out infinite;
+}
+
+/* Custom Navigation Link Styles */
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #88B04B;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active-link::after {
+  width: 60%;
+}
+
+.nav-link.active-link {
+  background-color: rgba(136, 176, 75, 0.1);
+  color: #88B04B !important;
+}
+
+/* Responsive Custom Scrollbar rules */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FDFBF7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A67C52;
+  border-radius: 9px;
+  border: 2px solid #FDFBF7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2D452E;
+}
+
+/* Extra premium touch controls */
+button:focus, a:focus {
+  outline: 2px solid rgba(136, 176, 75, 0.5);
+  outline-offset: 2px;
+}

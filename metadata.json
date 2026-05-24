@@ -1,0 +1,6 @@
+{
+  "name": "Kedai Rasa Rasa",
+  "description": "Website UMKM minuman segar tradisional premium Kedai Rasa Rasa - menyajikan Es Degan, Es Dawet, dan Es Teh dengan rasa istimewa.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
